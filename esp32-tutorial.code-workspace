@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "esp32-template"
+		},
+		{
+			"path": "esp32-led-blink"
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true
+	}
+}
