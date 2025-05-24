@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "esp32-btn-toggle"
+		},
+		{
+			"path": "esp32-led-blink-millis"
 		}
 	],
 	"settings": {
