@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "esp32-btn-press"
+		},
+		{
+			"path": "esp32-btn-toggle"
 		}
 	],
 	"settings": {
