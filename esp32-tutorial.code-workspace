@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "esp32-btn-toggle-millis"
+		},
+		{
+			"path": "esp32-serial-debug"
 		}
 	],
 	"settings": {
