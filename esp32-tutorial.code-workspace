@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "esp32-led-blink"
+		},
+		{
+			"path": "esp32-btn-press"
 		}
 	],
 	"settings": {
