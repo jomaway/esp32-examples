@@ -35,6 +35,9 @@
 		},
 		{
 			"path": "esp32-uart-string-input"
+		},
+		{
+			"path": "esp32-exti-btn"
 		}
 	],
 	"settings": {
