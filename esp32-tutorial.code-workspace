@@ -26,6 +26,9 @@
 		},
 		{
 			"path": "esp32-pwm-led-fade"
+		},
+		{
+			"path": "esp32-pwm-servo"
 		}
 	],
 	"settings": {
