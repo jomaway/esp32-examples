@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "esp32-serial-debug"
+		},
+		{
+			"path": "esp32-adc-poti"
 		}
 	],
 	"settings": {
