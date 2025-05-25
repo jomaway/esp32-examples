@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-constexpr uint8_t led = 18;
-constexpr uint8_t btn = 34;
+constexpr uint8_t ledPin = 18;
+constexpr uint8_t btnPin = 34;
 constexpr uint8_t buttonDebounceDelay = 50;
 
 // global variables
@@ -13,15 +13,15 @@ uint64_t lastChangeTime = 0;
 void setup()
 {
   // define led pin as output
-  pinMode(led, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   // define btn pin as input
-  pinMode(btn, INPUT);
+  pinMode(btnPin, INPUT);
 }
 
 void loop()
 {
   // read current button state
-  bool currentButtonState = digitalRead(btn);
+  bool currentButtonState = digitalRead(btnPin);
 
   // check for falling and rising edge
   if (currentButtonState != lastButtonState)
@@ -34,8 +34,8 @@ void loop()
     // check for falling edge
     if (currentButtonState == LOW && lastStableButtonState == HIGH)
     {
-      ledState = !ledState;        // toggle led state
-      digitalWrite(led, ledState); // apply led state
+      ledState = !ledState;           // toggle led state
+      digitalWrite(ledPin, ledState); // apply led state
     }
 
     // update stable button state

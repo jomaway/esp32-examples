@@ -1,17 +1,17 @@
 #include <Arduino.h>
 
-constexpr uint8_t led = 18;
+constexpr uint8_t ledPin = 18;
 
 void setup()
 {
   // define led pin as output
-  pinMode(led, OUTPUT);
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop()
 {
-  digitalWrite(led, HIGH); // turn led on
-  delay(500);              // wait 500 ms
-  digitalWrite(led, LOW);  // turn led off
-  delay(500);              // wait 500 ms
+  digitalWrite(ledPin, HIGH); // turn led on
+  delay(500);                 // wait 500 ms
+  digitalWrite(ledPin, LOW);  // turn led off
+  delay(500);                 // wait 500 ms
 }

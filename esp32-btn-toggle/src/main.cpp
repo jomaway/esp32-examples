@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-constexpr uint8_t led = 18;
-constexpr uint8_t btn = 34;
+constexpr uint8_t ledPin = 18;
+constexpr uint8_t btnPin = 34;
 
 // create some constant variable for our debounce time.
 // 30 to 50 ms should be enough
@@ -18,16 +18,16 @@ bool ledState = LOW;
 void setup()
 {
   // define led pin as output
-  pinMode(led, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   // define btn pin as input
-  pinMode(btn, INPUT);
+  pinMode(btnPin, INPUT);
 }
 
 void loop()
 {
 
   // read current button state
-  bool currentButtonState = digitalRead(btn);
+  bool currentButtonState = digitalRead(btnPin);
 
   // check for falling edge
   if (currentButtonState == LOW && lastButtonState == HIGH)
@@ -36,10 +36,10 @@ void loop()
     delay(buttonDebounceDelay);
 
     // check if the button is still pressed (LOW)
-    if (digitalRead(btn) == LOW)
+    if (digitalRead(btnPin) == LOW)
     {
-      ledState = !ledState;        // toggle led state
-      digitalWrite(led, ledState); // apply led state
+      ledState = !ledState;           // toggle led state
+      digitalWrite(ledPin, ledState); // apply led state
     }
   }
   lastButtonState = currentButtonState;

@@ -1,26 +1,26 @@
 #include <Arduino.h>
 
-constexpr uint8_t led = 18;
-constexpr uint8_t btn = 34;
+constexpr uint8_t ledPin = 18;
+constexpr uint8_t btnPin = 34;
 
 void setup()
 {
   // define led pin as output
-  pinMode(led, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   // define btn pin as input
-  pinMode(btn, INPUT);
+  pinMode(btnPin, INPUT);
 }
 
 void loop()
 {
   // read the current state of the button and
   // check if button is pressed (LOW)
-  if (digitalRead(btn) == LOW)
+  if (digitalRead(btnPin) == LOW)
   {
-    digitalWrite(led, HIGH); // turn led on
+    digitalWrite(ledPin, HIGH); // turn led on
   }
   else // button is not pressed (HIGH)
   {
-    digitalWrite(led, LOW); // turn led off
+    digitalWrite(ledPin, LOW); // turn led off
   }
 }

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-constexpr uint8_t led = 18;
-constexpr uint8_t poti = 35;
+constexpr uint8_t ledPin = 18;
+constexpr uint8_t potiPin = 35;
 constexpr uint16_t threshold = 500;
 
 void setup()
@@ -10,7 +10,7 @@ void setup()
   Serial.begin(9600);
 
   // define gpio pins
-  pinMode(led, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   // the adc pin does not need to be defined.
 
   // set the ADCs resolution in bits (default: 12)
@@ -24,20 +24,20 @@ void setup()
 void loop()
 {
   // read the analog value
-  uint16_t analogValue = analogRead(poti);
+  uint16_t potValue = analogRead(potiPin);
 
   // print value for debugging
   Serial.print("Analog value: ");
-  Serial.println(analogValue);
+  Serial.println(potValue);
 
   // if value is greater than our threshold
   // turn the led on else turn it off.
-  if (analogValue >= threshold)
+  if (potValue >= threshold)
   {
-    digitalWrite(led, HIGH);
+    digitalWrite(ledPin, HIGH);
   }
   else
   {
-    digitalWrite(led, LOW);
+    digitalWrite(ledPin, LOW);
   }
 }
