@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "esp32-adc-poti"
+		},
+		{
+			"path": "esp32-pwm-led-fade"
 		}
 	],
 	"settings": {
