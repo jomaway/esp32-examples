@@ -32,6 +32,9 @@
 		},
 		{
 			"path": "esp32-uart-byte-input"
+		},
+		{
+			"path": "esp32-uart-string-input"
 		}
 	],
 	"settings": {
