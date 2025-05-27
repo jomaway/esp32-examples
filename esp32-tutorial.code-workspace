@@ -1,45 +1,63 @@
 {
 	"folders": [
 		{
+			"name": "esp32-template",
 			"path": "esp32-template"
 		},
 		{
+			"name": "esp32-led-blink",
 			"path": "esp32-led-blink"
 		},
 		{
+			"name": "esp32-led-array",
+			"path": "esp32-led-array"
+		},
+		{
+			"name": "esp32-btn-press",
 			"path": "esp32-btn-press"
 		},
 		{
+			"name": "esp32-btn-toggle",
 			"path": "esp32-btn-toggle"
 		},
 		{
+			"name": "esp32-led-blink-millis",
 			"path": "esp32-led-blink-millis"
 		},
 		{
+			"name": "esp32-btn-toggle-millis",
 			"path": "esp32-btn-toggle-millis"
 		},
 		{
+			"name": "esp32-serial-debug",
 			"path": "esp32-serial-debug"
 		},
 		{
+			"name": "esp32-adc-poti",
 			"path": "esp32-adc-poti"
 		},
 		{
+			"name": "esp32-pwm-led-fade",
 			"path": "esp32-pwm-led-fade"
 		},
 		{
+			"name": "esp32-pwm-servo",
 			"path": "esp32-pwm-servo"
 		},
 		{
+			"name": "esp32-uart-byte-input",
 			"path": "esp32-uart-byte-input"
 		},
 		{
+			"name": "esp32-uart-string-input",
 			"path": "esp32-uart-string-input"
 		},
 		{
+			"name": "esp32-exti-btn",
 			"path": "esp32-exti-btn"
 		},
 		{
+			"name": "esp32-exti-encoder",
 			"path": "esp32-exti-encoder"
 		}
 	],
