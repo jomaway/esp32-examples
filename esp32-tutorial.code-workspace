@@ -59,6 +59,12 @@
 		{
 			"name": "esp32-exti-encoder",
 			"path": "esp32-exti-encoder"
+		},
+		{
+			"path": "esp32-fsm-traffic-light"
+		},
+		{
+			"path": "esp32-fsm-vending-machine"
 		}
 	],
 	"settings": {
@@ -66,5 +72,14 @@
 		"files.associations": {
 			"cstdint": "cpp"
 		}
+	},
+	"extensions": {
+		"recommendations": [
+			"platformio.platformio-ide",
+			"Wokwi.wokwi-vscode"
+		],
+		"unwantedRecommendations": [
+			"ms-vscode.cpptools-extension-pack"
+		]
 	}
 }
