@@ -23,8 +23,8 @@ void setup()
 {
   Serial.begin(115200);
   pinMode(ledPin, OUTPUT);
-  pinMode(btnStartPin, INPUT_PULLUP);
-  pinMode(btnStopPin, INPUT_PULLUP);
+  pinMode(btnStartPin, INPUT);
+  pinMode(btnStopPin, INPUT);
 
   // call our ISR if a falling edge happens on the defined pins.
   attachInterrupt(btnStartPin, startISR, FALLING);
