@@ -42,6 +42,30 @@ code esp32-tutorial.code-workspace
 - To *simulate with wokwi* (requires account), _build_ the project and start the **Wokwi Simulator** by opening the `diagram.json` and click the play button. 
 
 
+## Learning Path
+
+The examples are not strictly at a fixed order but if you want to go through them step by step, you can follow this learning path.
+
+1. GPIOs and Serial Output
+
+  - [Blink an LED](/esp32-led-blink)
+  - [Controll multiple LEDs at once](/esp32-led-array)
+  - [Simple print debugging](/esp32-serial-debug)
+  - [Press a button](/esp32-btn-press)
+  - [Toggle a button](/esp32-btn-toggle)
+
+2. Non Blocking GPIO usage
+
+  - [Blink LED with `millis()`](/esp32-led-blink-millis)
+  - [Toggle a button with `millis()`](/esp32-btn-toggle-millis)
+  - [Toggle a button with a shift register](/esp32-btn-toggle-shift)
+
+3. ADC and PWM
+
+  - [Read a Poti](/esp32-adc-poti)
+  - [Fade an LED](/esp32-led-fade)
+  - [Controll a Servo with](/esp32-servo)
+
 
 ## 📄 License
 
