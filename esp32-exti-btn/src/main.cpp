@@ -3,13 +3,12 @@
 constexpr uint8_t ledPin = 18;
 constexpr uint8_t btnStartPin = 34;
 constexpr uint8_t btnStopPin = 35;
-
-// we need to declare the running variable as volatile because it is modified inside an ISR
-volatile bool running = false;
-
 // for demonstration purposes, we will use a busy delay of 2 seconds to simulate some work being done
 // this could be some time consuming calculation or similar, but for the sake of this example we will just use a delay
 constexpr uint32_t busyDelay = 2000;
+
+// we need to declare the running variable as volatile because it is modified inside an ISR
+volatile bool running = false;
 
 // isr for pressing the start button
 // ! on esp32 the IRAM_ATTR is needed
