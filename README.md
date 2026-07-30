@@ -60,13 +60,31 @@ The examples are not strictly at a fixed order but if you want to go through the
   - [Toggle a button with `millis()`](/esp32-btn-toggle-millis)
   - [Toggle a button with a shift register](/esp32-btn-toggle-shift)
 
-3. ADC and PWM
+
+  - [Project Traffic Light](/esp32-project-traffic-light)
+
+3. FSM
+
+  - [FSM Pattern Traffic Light](/esp32-fsm-traffic-light)
+  - [FSM Pattern Vending Machine](/esp32-fsm-vending-machine)
+
+4. External Interrupts and Timers
+
+  - [Detect button press with an external interrupt](/esp32-exti-btn)
+  - [Read a rotary encoder state](/esp32-exti-encoder)
+  - [Blink LED without using the loop](/esp32-timer-led-blink)
+
+5. ADC and PWM
 
   - [Read a Poti](/esp32-adc-poti)
   - [Fade an LED](/esp32-led-fade)
   - [Controll a Servo with](/esp32-servo)
 
+6. Communication Protocols
 
+  - [Reading bytes from UART](/esp32-uart-byte-input)
+  - [Sending commands over UART](/esp32-uart-string-input)
+  - [Read BM280 Sensor over I2C](/esp32-sensor-node)
 ## 📄 License
 
 This project is licensed under the MIT License.
