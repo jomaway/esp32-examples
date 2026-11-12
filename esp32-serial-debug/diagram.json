@@ -37,6 +37,16 @@
       "attrs": {
         "value": "220"
       }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 61.85,
+      "left": -107,
+      "rotate": 180,
+      "attrs": {
+        "value": "1000"
+      }
     }
   ],
   "connections": [
@@ -74,6 +84,22 @@
       "black",
       [
         "h0"
+      ]
+    ],
+    [
+      "esp:3V3",
+      "r2:1",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "r2:2",
+      "btn1:1.r",
+      "red",
+      [
+        "v0"
       ]
     ],
     [
