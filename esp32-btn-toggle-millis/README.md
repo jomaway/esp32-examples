@@ -44,7 +44,7 @@ Because nothing waits, `buttonPressed()` must be called on every `loop()` run, a
 
 ## Things to Think About
 
-`buttonPressed()` keeps its state in global variables and reads a fixed pin, so it only works for **one** button. How would you debounce two buttons? Later examples show two answers: passing the state by reference ([FSM Vending Machine](../esp32-fsm-vending-machine)) and wrapping it in a class ([Component Drivers](../esp32-component-drivers)).
+`buttonPressed()` keeps its state in global variables and reads a fixed pin, so it only works for **one** button. How would you debounce two buttons? Later examples show two answers: grouping the state in a `struct` and passing it by reference ([FSM Vending Machine](../esp32-fsm-vending-machine)), and wrapping it in a class ([Component Drivers](../esp32-component-drivers)).
 
 ## Exercises
 

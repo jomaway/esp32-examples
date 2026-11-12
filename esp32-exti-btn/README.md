@@ -11,6 +11,7 @@ React to button presses with **external interrupts** – even while the `loop()`
 - `IRAM_ATTR` – places the ISR in internal RAM (required on the ESP32)
 - `volatile` for variables shared between ISR and main program
 - Rule of thumb: **keep ISRs short** – just set a flag
+- `static` local variables: keep their value between function calls (`lastBlink` in `loop_example_2()`)
 
 ## Wiring
 
