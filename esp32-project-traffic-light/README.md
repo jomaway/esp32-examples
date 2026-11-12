@@ -11,31 +11,45 @@ A small project that combines everything from sections 1 and 2: a traffic light 
 - A button press toggles between normal and night mode.
 - The button is debounced without `delay()`.
 
-## New Concepts
+## What You Need
 
-- Combining several independent `millis()` timers in one program
-- `enum` to give states readable names (`RED`, `GREEN`, `YELLOW`)
-- `switch` / `case`
-- Splitting code into functions (`update_lights()`, `night_mode()`, `normal_operation()`)
-- `static` local variables that keep their value between function calls
-- A different board: **Seeed XIAO ESP32-S3** (Dx labels ≠ GPIO numbers)
+No new concepts – the project only combines what you already know:
+
+- Several independent `millis()` timers in one program ([LED Blink with millis()](../esp32-led-blink-millis))
+- Non-blocking debouncing with `buttonPressed()` – copied unchanged from [Button Toggle with millis()](../esp32-btn-toggle-millis)
+- Functions with parameters: `setLights(red, yellow, green)` switches all three LEDs at once
+- A number (`phase`) to remember where the traffic light currently is: `0` = red, `1` = green, `2` = yellow
+- `bool` flags (`nightMode`) and `if` / `else if`
 
 ## Wiring
 
-Board: Seeed XIAO ESP32-S3 (`env:esp32-wokwi`)
+Same circuit as [FSM Traffic Light](../esp32-fsm-traffic-light) – you can keep it on the breadboard for the next section.
 
-| Part          | Board pin | GPIO | Notes                         |
-| ------------- | --------- | ---- | ----------------------------- |
-| Push button   | D0        | 1    | other side to GND, 1 kΩ pull-up to 3V3 |
-| Red LED       | D1        | 2    | 1 kΩ resistor to GND          |
-| Yellow LED    | D2        | 3    | 1 kΩ resistor to GND          |
-| Green LED     | D3        | 4    | 1 kΩ resistor to GND          |
+| Part          | ESP32 pin | Notes                                   |
+| ------------- | --------- | --------------------------------------- |
+| Red LED       | GPIO 19   | 220 Ω resistor to GND                   |
+| Yellow LED    | GPIO 18   | 220 Ω resistor to GND                   |
+| Green LED     | GPIO 5    | 220 Ω resistor to GND                   |
+| Night button  | GPIO 34   | other side to GND, 10 kΩ pull-up to 3V3 |
 
 Serial monitor: 115200 baud.
 
+## How it works
+
+`loop()` does two things on every run:
+
+1. **Check the button.** A press flips `nightMode`. Leaving night mode restarts the cycle with a full red phase.
+2. **Update the lights.** In night mode the yellow LED toggles every 500 ms. In normal mode, three `if (phase == … && time is over)` checks move the light to the next phase.
+
 ## Things to Think About
 
-The logic for "which light comes next" is spread over several functions and flags (`nightModeActive`, `traffic_light_state`). It works, but it gets hard to extend. The next section introduces the **finite state machine (FSM)** pattern as a cleaner structure – compare this solution with [FSM Traffic Light](../esp32-fsm-traffic-light).
+The program works, but look at what it takes to understand or change it:
+
+- `phase == 1` – which colour was that again? The numbers are **magic numbers**: their meaning lives only in a comment.
+- Night mode isn't a phase. It is a separate flag that is checked *before* the phases, and switching it on or off must also reset `phase`, `phaseStartTime` and the lights.
+- Try exercise 1: adding the red+yellow phase means renumbering phases and touching several places at once.
+
+The next section introduces the **finite state machine (FSM)**: `enum` gives the states names, `switch` replaces the `if` chain, and night mode simply becomes another state (`NIGHT`). Compare this solution with [FSM Traffic Light](../esp32-fsm-traffic-light).
 
 ## Exercises
 

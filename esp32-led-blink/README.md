@@ -30,6 +30,7 @@ The "hello world" of microcontrollers: make an LED blink every 500 ms.
 1. Change the blink frequency. What is the fastest blink you can still see?
 2. Make the LED blink in an SOS pattern (`... --- ...`).
 3. Create a traffic light with three LEDs (red, yellow, green).
+4. Move the blink code into a function `void blink(uint8_t pin)` and use it for **two** LEDs. Do they blink at the same time? Why not? (The answer leads to [LED Blink with millis()](../esp32-led-blink-millis).)
 
 ## Further Reading
 
