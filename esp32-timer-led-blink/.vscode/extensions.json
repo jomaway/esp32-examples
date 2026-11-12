@@ -2,10 +2,10 @@
     // See http://go.microsoft.com/fwlink/?LinkId=827846
     // for the documentation about the extensions.json format
     "recommendations": [
-        "platformio.platformio-ide",
-        "usernamehw.errorlens",
         "Wokwi.wokwi-vscode",
-        "ms-vscode.cpptools"
+        "ms-vscode.cpptools",
+        "platformio.platformio-ide",
+        "usernamehw.errorlens"
     ],
     "unwantedRecommendations": [
         "ms-vscode.cpptools-extension-pack",
