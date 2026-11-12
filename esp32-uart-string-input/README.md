@@ -2,7 +2,7 @@
 
 A tiny command-line interface: control an LED with text commands like `led on`.
 
-> **Learning path:** 6. Communication Protocols · [← Previous: UART Byte Input](../esp32-uart-byte-input) · [Next: Sensor Node →](../esp32-sensor-node)
+> **Learning path:** 6. UART · [← Previous: UART Byte Input](../esp32-uart-byte-input) · [Next: I²C Scanner →](../esp32-i2c-scanner)
 
 ## New Concepts
 

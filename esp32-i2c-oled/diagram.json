@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "author": "jomaway",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 38.4,
+      "left": -43.16,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rSda",
+      "top": 24,
+      "left": 95.45,
+      "rotate": 90,
+      "attrs": {
+        "value": "4700"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rScl",
+      "top": 24,
+      "left": 76.25,
+      "rotate": 90,
+      "attrs": {
+        "value": "4700"
+      }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 127.94,
+      "left": 211.43,
+      "attrs": {
+        "i2cAddress": "0x3c"
+      }
+    },
+    {
+      "type": "wokwi-logic-analyzer",
+      "id": "logic1",
+      "top": 278.75,
+      "left": 192,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 86.4,
+      "left": 67.2,
+      "attrs": {
+        "text": "SCL"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 115.2,
+      "left": 67.2,
+      "attrs": {
+        "text": "SDA"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "rSda:1",
+      "esp:3V3",
+      "red",
+      [
+        "v-9.6",
+        "h-163.35"
+      ]
+    ],
+    [
+      "rSda:2",
+      "esp:21",
+      "violet",
+      [
+        "v114"
+      ]
+    ],
+    [
+      "rScl:1",
+      "esp:3V3",
+      "red",
+      [
+        "v-9.6",
+        "h-144.15"
+      ]
+    ],
+    [
+      "rScl:2",
+      "esp:22",
+      "gold",
+      [
+        "v75.6"
+      ]
+    ],
+    [
+      "oled1:GND",
+      "esp:GND.2",
+      "black",
+      [
+        "v-67.2",
+        "h-192"
+      ]
+    ],
+    [
+      "oled1:VCC",
+      "esp:3V3",
+      "red",
+      [
+        "v-144",
+        "h-508.8"
+      ]
+    ],
+    [
+      "oled1:SCL",
+      "esp:22",
+      "gold",
+      [
+        "v-48",
+        "h-210.9"
+      ]
+    ],
+    [
+      "oled1:SDA",
+      "esp:21",
+      "violet",
+      [
+        "v-19.2",
+        "h-105.53",
+        "v28.8"
+      ]
+    ],
+    [
+      "logic1:D0",
+      "esp:22",
+      "gold",
+      [
+        "h-38.4",
+        "v-201.6"
+      ]
+    ],
+    [
+      "logic1:D1",
+      "esp:21",
+      "violet",
+      [
+        "h-19.2",
+        "v-163.2"
+      ]
+    ],
+    [
+      "logic1:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h-240",
+        "v-153.6"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}

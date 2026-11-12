@@ -1,0 +1,5 @@
+default:
+    just --list --unsorted
+
+build:
+    podman run --rm -it --userns=keep-id -u 1000:1000 -v ${PWD}:/src:Z -w /src  docker.io/wokwi/builder-clang-wasm:latest make

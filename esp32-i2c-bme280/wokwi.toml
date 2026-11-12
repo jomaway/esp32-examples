@@ -1,0 +1,9 @@
+[wokwi]
+version = 1
+elf = ".pio/build/esp32dev/firmware.elf"
+firmware = ".pio/build/esp32dev/firmware.bin"
+vcdFile = 'i2c-bme280-capture.vcd'
+
+[[chip]]
+name = 'bme280' # used as "chip-bme280" in diagram.json
+binary = 'chips/dist/bme280.chip.wasm'

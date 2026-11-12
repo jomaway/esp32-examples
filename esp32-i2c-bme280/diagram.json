@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "author": "jomaway",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 38.4,
+      "left": -43.16,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rSda",
+      "top": 24,
+      "left": 95.45,
+      "rotate": 90,
+      "attrs": {
+        "value": "4700"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rScl",
+      "top": 24,
+      "left": 76.25,
+      "rotate": 90,
+      "attrs": {
+        "value": "4700"
+      }
+    },
+    {
+      "type": "chip-bme280",
+      "id": "bme1",
+      "top": 231.42,
+      "left": 206.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-logic-analyzer",
+      "id": "logic1",
+      "top": 278.75,
+      "left": 192,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 86.4,
+      "left": 67.2,
+      "attrs": {
+        "text": "SCL"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 115.2,
+      "left": 67.2,
+      "attrs": {
+        "text": "SDA"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "rSda:1",
+      "esp:3V3",
+      "red",
+      [
+        "v-9.6",
+        "h-163.35"
+      ]
+    ],
+    [
+      "rSda:2",
+      "esp:21",
+      "violet",
+      [
+        "v114"
+      ]
+    ],
+    [
+      "rScl:1",
+      "esp:3V3",
+      "red",
+      [
+        "v-9.6",
+        "h-144.15"
+      ]
+    ],
+    [
+      "rScl:2",
+      "esp:22",
+      "gold",
+      [
+        "v75.6"
+      ]
+    ],
+    [
+      "bme1:VCC",
+      "esp:3V3",
+      "red",
+      [
+        "h49.81",
+        "v-249.6",
+        "h-403.35"
+      ]
+    ],
+    [
+      "bme1:SCL",
+      "esp:22",
+      "gold",
+      [
+        "h-57.6",
+        "v-134.4"
+      ]
+    ],
+    [
+      "bme1:SDA",
+      "esp:21",
+      "violet",
+      [
+        "h-38.4",
+        "v-115.2"
+      ]
+    ],
+    [
+      "logic1:D0",
+      "esp:22",
+      "gold",
+      [
+        "h-38.4",
+        "v-201.6"
+      ]
+    ],
+    [
+      "logic1:D1",
+      "esp:21",
+      "violet",
+      [
+        "h-19.2",
+        "v-163.2"
+      ]
+    ],
+    [
+      "logic1:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h-240",
+        "v-153.6"
+      ]
+    ],
+    [
+      "bme1:GND",
+      "logic1:GND",
+      "black",
+      [
+        "v0",
+        "h49.81",
+        "v134.4",
+        "h-172.8"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}

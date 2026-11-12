@@ -1,0 +1,44 @@
+{
+    "name": "bme280",
+    "author": "jomaway",
+    "pins": [
+        "SCL",
+        "SDA",
+        "GND",
+        "VCC"
+    ],
+    "controls": [
+        {
+            "id": "threshold",
+            "label": "Address",
+            "type": "range",
+            "min": 118,
+            "max": 119,
+            "step": 1
+        },
+        {
+            "id": "temp",
+            "label": "Temperature source",
+            "type": "range",
+            "min": 5000000,
+            "max": 9000000,
+            "step": 500
+        },
+        {
+            "id": "press",
+            "label": "Pressure source",
+            "type": "range",
+            "min": 4840000,
+            "max": 7550000,
+            "step": 500
+        },
+        {
+            "id": "hum",
+            "label": "Humidity source",
+            "type": "range",
+            "min": 19390,
+            "max": 37110,
+            "step": 2
+        }
+    ]
+}

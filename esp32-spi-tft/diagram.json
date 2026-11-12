@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "author": "jomaway",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "lcd1",
+      "top": -14.3,
+      "left": 279.6,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 76.8,
+      "left": 105.6,
+      "attrs": {
+        "text": "MISO"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 38.4,
+      "left": 105.6,
+      "attrs": {
+        "text": "MOSI"
+      }
+    },
+    {
+      "type": "wokwi-logic-analyzer",
+      "id": "logic1",
+      "top": 249.95,
+      "left": 220.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "lcd1:VCC",
+      "esp:3V3",
+      "red",
+      [
+        "h-38.4",
+        "v-105.6",
+        "h-187.39"
+      ]
+    ],
+    [
+      "lcd1:GND",
+      "esp:GND.2",
+      "black",
+      [
+        "h-48",
+        "v-57.6"
+      ]
+    ],
+    [
+      "lcd1:LED",
+      "esp:3V3",
+      "red",
+      [
+        "h-38.4",
+        "v-172.81",
+        "h-187.39"
+      ]
+    ],
+    [
+      "lcd1:CS",
+      "esp:5",
+      "orange",
+      [
+        "h-67.2",
+        "v19.2"
+      ]
+    ],
+    [
+      "lcd1:D/C",
+      "esp:16",
+      "blue",
+      [
+        "h-105.6",
+        "v19.2"
+      ]
+    ],
+    [
+      "lcd1:RST",
+      "esp:17",
+      "white",
+      []
+    ],
+    [
+      "lcd1:MOSI",
+      "esp:23",
+      "green",
+      [
+        "h-57.6",
+        "v-86.41"
+      ]
+    ],
+    [
+      "lcd1:SCK",
+      "esp:18",
+      "gold",
+      [
+        "h-96",
+        "v-48.01"
+      ]
+    ],
+    [
+      "lcd1:MISO",
+      "esp:19",
+      "violet",
+      [
+        "h-76.8",
+        "v-76.81"
+      ]
+    ],
+    [
+      "logic1:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h-230.4",
+        "v-144"
+      ]
+    ],
+    [
+      "logic1:D0",
+      "esp:18",
+      "gold",
+      [
+        "h-86.4",
+        "v-105.6"
+      ]
+    ],
+    [
+      "logic1:D1",
+      "esp:5",
+      "orange",
+      [
+        "h-96",
+        "v-153.6"
+      ]
+    ],
+    [
+      "logic1:D2",
+      "esp:23",
+      "green",
+      [
+        "h-48",
+        "v-240"
+      ]
+    ],
+    [
+      "logic1:D3",
+      "esp:19",
+      "violet",
+      [
+        "h-67.2",
+        "v-192"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}

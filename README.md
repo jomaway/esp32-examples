@@ -78,11 +78,19 @@ The examples are not strictly at a fixed order but if you want to go through the
   - [Fade an LED](/esp32-pwm-led-fade)
   - [Control a servo with a potentiometer](/esp32-pwm-servo)
 
-6. Communication Protocols
+6. UART
 
   - [Reading bytes from UART](/esp32-uart-byte-input)
   - [Sending commands over UART](/esp32-uart-string-input)
-  - [Read a BME280 sensor over I²C](/esp32-sensor-node)
+
+7. Buses: I²C and SPI
+
+  - [Find devices on the I²C bus](/esp32-i2c-scanner)
+  - [Show text and graphics on an OLED display](/esp32-i2c-oled)
+  - **Project:** [Vending Machine with Display](/esp32-project-vending-machine)
+  - [Read a BME280 sensor](/esp32-i2c-bme280)
+  - [Draw on a colour display over SPI](/esp32-spi-tft)
+  - **Advanced project:** [Sensor Node](/esp32-project-sensor-node)
 
 ## 📄 License
 

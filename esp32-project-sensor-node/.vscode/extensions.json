@@ -1,0 +1,14 @@
+{
+    // See http://go.microsoft.com/fwlink/?LinkId=827846
+    // for the documentation about the extensions.json format
+    "recommendations": [
+        "Wokwi.wokwi-vscode",
+        "ms-vscode.cpptools",
+        "platformio.platformio-ide",
+        "usernamehw.errorlens"
+    ],
+    "unwantedRecommendations": [
+        "ms-vscode.cpptools-extension-pack",
+        "pioarduino.pioarduino-ide"
+    ]
+}

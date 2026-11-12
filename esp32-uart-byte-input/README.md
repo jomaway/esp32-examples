@@ -2,7 +2,7 @@
 
 Control an LED by sending single characters from the PC to the ESP32.
 
-> **Learning path:** 6. Communication Protocols · [← Previous: PWM Servo](../esp32-pwm-servo) · [Next: UART String Input →](../esp32-uart-string-input)
+> **Learning path:** 6. UART · [← Previous: PWM Servo](../esp32-pwm-servo) · [Next: UART String Input →](../esp32-uart-string-input)
 
 ## New Concepts
 

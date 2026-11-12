@@ -71,6 +71,8 @@ Button coinButton = {coinButtonPin, HIGH, HIGH, 0};
 
 `buttonPressed(Button &button)` takes the button **by reference**. The `&` means the function works on the original struct, not on a copy. Without it, the updated states would be lost after every call. The [Component Drivers](../esp32-component-drivers) example takes the next step and turns this struct into a class.
 
+> **Later:** in section 7 this vending machine gets an OLED display: [Project Vending Machine with Display](../esp32-project-vending-machine).
+
 ## Exercises
 
 1. Add a *Cancel* button that returns the coins (back to `Idle`). In which states should it work?
