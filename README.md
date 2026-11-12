@@ -77,14 +77,14 @@ The examples are not strictly at a fixed order but if you want to go through the
 5. ADC and PWM
 
   - [Read a Poti](/esp32-adc-poti)
-  - [Fade an LED](/esp32-led-fade)
-  - [Controll a Servo with](/esp32-servo)
+  - [Fade an LED](/esp32-pwm-led-fade)
+  - [Controll a Servo with](/esp32-pwm-servo)
 
 6. Communication Protocols
 
   - [Reading bytes from UART](/esp32-uart-byte-input)
   - [Sending commands over UART](/esp32-uart-string-input)
-  - [Read BM280 Sensor over I2C](/esp32-sensor-node)
+  - [Read BME280 Sensor over I2C](/esp32-sensor-node)
 ## 📄 License
 
 This project is licensed under the MIT License.
