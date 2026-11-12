@@ -71,8 +71,8 @@ void loop()
   if (currentState == VendingState::CoinInserted)
   {
     // blink the ready LED to indicate coins are inserted
-    static unsigned long lastBlinkTime = 0;
-    unsigned long currentTime = millis();
+    static uint32_t lastBlinkTime = 0;
+    uint32_t currentTime = millis();
     if (currentTime - lastBlinkTime >= 500) // blink every 500 ms
     {
       digitalWrite(readyLedPin, !digitalRead(readyLedPin)); // toggle LED state

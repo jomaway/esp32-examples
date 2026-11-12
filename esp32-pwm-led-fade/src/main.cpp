@@ -11,7 +11,7 @@ constexpr uint8_t ledPin = 18;
 constexpr uint8_t fadeDelay = 10;
 constexpr uint32_t delayTime = 500; // Delay time in milliseconds for fade in/out
 
-constexpr uint16_t pwmFrequence = 5000; // PWM frequency in Hz.
+constexpr uint16_t pwmFrequency = 5000; // PWM frequency in Hz.
 constexpr uint8_t pwmResolution = 8;    // PWM resolution (1-16 bits). 8-bit means 0-255 duty cycle.
 
 void setup()
@@ -20,7 +20,7 @@ void setup()
   Serial.begin(9600);
 
   // config the ledc pwm
-  ledcAttach(ledPin, pwmFrequence, pwmResolution);
+  ledcAttach(ledPin, pwmFrequency, pwmResolution);
   Serial.println("--- Setup finished ---");
 }
 

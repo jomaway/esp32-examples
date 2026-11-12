@@ -19,7 +19,7 @@ Same circuit as [Button Press](../esp32-btn-press):
 | ----------- | --------- | ----------------------------------- |
 | LED         | GPIO 18   | through a 220 Ω resistor to GND     |
 | Push button | GPIO 34   | other side to GND                   |
-| Pull-up     | GPIO 34   | 1 kΩ resistor to 3V3                |
+| Pull-up     | GPIO 34   | 10 kΩ resistor to 3V3               |
 
 ## How it works
 

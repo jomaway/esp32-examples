@@ -8,7 +8,7 @@ constexpr uint8_t buttonDebounceDelay = 50;
 bool ledState = LOW;
 bool lastButtonState = HIGH;
 bool lastStableButtonState = HIGH;
-uint64_t lastChangeTime = 0;
+uint32_t lastChangeTime = 0;
 
 void setup()
 {

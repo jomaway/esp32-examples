@@ -49,19 +49,17 @@ The examples are not strictly at a fixed order but if you want to go through the
 1. GPIOs and Serial Output
 
   - [Blink an LED](/esp32-led-blink)
-  - [Controll multiple LEDs at once](/esp32-led-array)
+  - [Control multiple LEDs at once](/esp32-led-array)
   - [Simple print debugging](/esp32-serial-debug)
   - [Press a button](/esp32-btn-press)
   - [Toggle a button](/esp32-btn-toggle)
 
-2. Non Blocking GPIO usage
+2. Non-blocking GPIO usage
 
   - [Blink LED with `millis()`](/esp32-led-blink-millis)
   - [Toggle a button with `millis()`](/esp32-btn-toggle-millis)
   - [Toggle a button with a shift register](/esp32-btn-toggle-shift)
-
-
-  - [Project Traffic Light](/esp32-project-traffic-light)
+  - **Project:** [Traffic Light](/esp32-project-traffic-light)
 
 3. FSM
 
@@ -76,15 +74,16 @@ The examples are not strictly at a fixed order but if you want to go through the
 
 5. ADC and PWM
 
-  - [Read a Poti](/esp32-adc-poti)
+  - [Read a potentiometer](/esp32-adc-poti)
   - [Fade an LED](/esp32-pwm-led-fade)
-  - [Controll a Servo with](/esp32-pwm-servo)
+  - [Control a servo with a potentiometer](/esp32-pwm-servo)
 
 6. Communication Protocols
 
   - [Reading bytes from UART](/esp32-uart-byte-input)
   - [Sending commands over UART](/esp32-uart-string-input)
-  - [Read BME280 Sensor over I2C](/esp32-sensor-node)
+  - [Read a BME280 sensor over I²C](/esp32-sensor-node)
+
 ## 📄 License
 
 This project is licensed under the MIT License.

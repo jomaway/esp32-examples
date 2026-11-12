@@ -11,19 +11,21 @@ constexpr int8_t COUNTERCLOCKWISE = -1;
 
 // Lookup table for state transitions (4x4 matrix, flattened to 16 elements)
 // Index: (prev_A << 3) | (prev_B << 2) | (curr_A << 1) | curr_B
+//      = prev * 4 + curr  -> each row is one previous state, each column one current state
 // Value: +1 for CW, -1 for CCW, 0 for no change/invalid transition
+// CW sequence: 00 -> 01 -> 11 -> 10 -> 00
 constexpr int8_t ENCODER_LOOKUP_TABLE[16] = {
-    // Previous states: 00, 01, 10, 11
-    NONE, CLOCKWISE, COUNTERCLOCKWISE, NONE, // Current state is 00
-    COUNTERCLOCKWISE, NONE, NONE, CLOCKWISE, // Current state is 01
-    CLOCKWISE, NONE, NONE, COUNTERCLOCKWISE, // Current state is 10
-    NONE, COUNTERCLOCKWISE, CLOCKWISE, NONE  // Current state is 11
+    // Current state:  00,           01,               10,               11
+    NONE, CLOCKWISE, COUNTERCLOCKWISE, NONE, // Previous state was 00
+    COUNTERCLOCKWISE, NONE, NONE, CLOCKWISE, // Previous state was 01
+    CLOCKWISE, NONE, NONE, COUNTERCLOCKWISE, // Previous state was 10
+    NONE, COUNTERCLOCKWISE, CLOCKWISE, NONE  // Previous state was 11
 };
 
 volatile int8_t encDelta = 0;
 volatile uint8_t prevEncPinState; // Store previous state (00, 01, 10, 11)
 
-// isr for pressing the start button
+// isr called on every edge of encPinA or encPinB
 // ! on esp32 the IRAM_ATTR is needed
 void IRAM_ATTR onEncChange()
 {
@@ -50,7 +52,7 @@ void setup()
   // Read initial state
   prevEncPinState = (digitalRead(encPinA) << 1) | digitalRead(encPinB);
 
-  // call our ISR if a falling edge happens on the defined pins.
+  // call our ISR on every edge (rising and falling) of both encoder pins.
   attachInterrupt(encPinA, onEncChange, CHANGE);
   attachInterrupt(encPinB, onEncChange, CHANGE);
 }

@@ -23,7 +23,7 @@ enum TrafficLightEvent
 void handleEvent(TrafficLightEvent event);
 
 TrafficLightState state = TrafficLightState::OFF;
-uint64_t nextTransitionTime = 0;
+uint32_t nextTransitionTime = 0;
 
 void setup()
 {

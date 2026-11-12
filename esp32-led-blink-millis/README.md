@@ -9,7 +9,7 @@ Blink an LED **without** `delay()`. The `loop()` never blocks, so the program co
 - **Blocking vs. non-blocking** code
 - `millis()` – milliseconds since the board started
 - The "has enough time passed?" pattern: `if (now - lastChangeTime >= interval)`
-- Storing timestamps in unsigned integer types
+- Storing timestamps in `uint32_t` – the same type `millis()` returns, so the subtraction stays overflow-safe
 
 ## Wiring
 
@@ -22,7 +22,7 @@ Blink an LED **without** `delay()`. The `loop()` never blocks, so the program co
 Each loop reads the current time. When at least 300 ms have passed since the last toggle, the LED state is inverted and the current time is stored in `lastChangeTime`. Otherwise `loop()` returns immediately – it runs thousands of times per second instead of sleeping.
 
 ```cpp
-if (currentMillis - lastChangeTime >= blinkFrequency) { ... }
+if (currentMillis - lastChangeTime >= blinkInterval) { ... }
 ```
 
 > **Tip:** Always write the comparison as a *subtraction* like above. It keeps working when the `millis()` counter overflows; `millis() >= nextTime` does not.

@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
 constexpr uint8_t ledPin = 18;
-constexpr uint64_t blinkFrequency = 300;
+constexpr uint32_t blinkInterval = 300; // time between two toggles in ms
 
 bool ledState = LOW;         // current led state;
-uint64_t lastChangeTime = 0; // last toggle time in ms
+uint32_t lastChangeTime = 0; // last toggle time in ms
 
 void setup()
 {
@@ -15,10 +15,10 @@ void setup()
 void loop()
 {
   // read current millis
-  uint64_t currentMillis = millis();
+  uint32_t currentMillis = millis();
 
   // check if 300 ms have passed
-  if (currentMillis - lastChangeTime >= blinkFrequency)
+  if (currentMillis - lastChangeTime >= blinkInterval)
   {
     // toggle led state
     ledState = !ledState;

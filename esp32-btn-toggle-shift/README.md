@@ -17,7 +17,7 @@ A third way to debounce a button: sample it every 5 ms and shift each reading in
 | ----------- | --------- | --------------------------------- |
 | LED         | GPIO 18   | through a 220 Ω resistor to GND   |
 | Push button | GPIO 34   | other side to GND                 |
-| Pull-up     | GPIO 34   | 1 kΩ resistor to 3V3              |
+| Pull-up     | GPIO 34   | 10 kΩ resistor to 3V3             |
 
 Serial monitor: 9600 baud.
 

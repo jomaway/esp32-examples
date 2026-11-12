@@ -40,4 +40,8 @@ void loop()
   {
     digitalWrite(ledPin, LOW);
   }
+
+  // slow down the loop, otherwise the serial monitor gets flooded
+  // (see Serial Debug example)
+  delay(100);
 }

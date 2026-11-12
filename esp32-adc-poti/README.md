@@ -27,7 +27,7 @@ Serial monitor: 9600 baud.
 
 ## How it works
 
-The potentiometer divides 3.3 V depending on the knob position. `analogRead()` converts this voltage into a value between 0 and 1023. If the value is ≥ 500 the LED turns on.
+The potentiometer divides 3.3 V depending on the knob position. `analogRead()` converts this voltage into a value between 0 and 1023. If the value is ≥ 500 the LED turns on. A `delay(100)` limits the output to 10 lines per second so the serial monitor stays readable.
 
 ## Exercises
 

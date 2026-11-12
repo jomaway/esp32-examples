@@ -9,16 +9,16 @@ static_assert(
 constexpr uint8_t servoPin = 18;
 constexpr uint8_t potiPin = 35;
 
-constexpr uint16_t pwmFrequence = 50; // 50 Hz -> period of 20 ms
+constexpr uint16_t pwmFrequency = 50; // 50 Hz -> period of 20 ms
 constexpr uint8_t pwmResolution = 12; // 0 - 4095
 constexpr uint8_t pwmChannel = 0;
 
 void setup()
 {
   // config the pwm
-  ledcAttach(servoPin, pwmFrequence, pwmResolution);
+  ledcAttach(servoPin, pwmFrequency, pwmResolution);
   // if you want to use a specific channel, you can use the following function instead of ledcAttach():
-  // ledcAttachChannel(servoPin, pwmFrequence, pwmResolution, pwmChannel);
+  // ledcAttachChannel(servoPin, pwmFrequency, pwmResolution, pwmChannel);
 }
 
 void loop()
@@ -28,7 +28,7 @@ void loop()
 
   // map the analog value to the required duty cycle.
   // servo need 2.5% for 0° and 12.5% for 180°
-  uint64_t dutyCycle = map(potValue, 0, 4095, 102, 512);
+  uint32_t dutyCycle = map(potValue, 0, 4095, 102, 512);
 
   ledcWrite(servoPin, dutyCycle);
 }
