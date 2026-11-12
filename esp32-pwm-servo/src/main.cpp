@@ -1,6 +1,3 @@
-// note: this example still uses the APIs from ESP_ARDUINO_VERSION_MAJOR == 2
-// As platformio ships this version by default.
-// See: https://docs.espressif.com/projects/arduino-esp32/en/latest/migration_guides/2.x_to_3.0.html
 #include <Arduino.h>
 // Check if the Arduino ESP32 Core version is 3.x or newer
 // This is important because the ledc functions used in this code
