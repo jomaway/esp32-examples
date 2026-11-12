@@ -53,7 +53,7 @@ void loop()
       Serial.println("led on    \t 'Turns the led on' ");
       Serial.println("led off   \t 'Turns the led off'");
       Serial.println("led toggle\t 'Toggle the led state'");
-      Serial.println("status    \t 'Prints the current led state'");
+      Serial.println("led status\t 'Prints the current led state'");
       Serial.println("help:     \t 'Display this help'");
     }
     else
